@@ -1,0 +1,70 @@
+.header-banner {
+    background: linear-gradient(to right, #101925, #1e2b40);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.header-banner .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.banner-content {
+    text-align: left;
+    padding-left: 100px;
+}
+
+.banner-content h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.breadcrumb {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.breadcrumb .active {
+    color: var(--primary-color);
+}
+
+.gear-icon {
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.gear-svg {
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 36px;
+    }
+}
