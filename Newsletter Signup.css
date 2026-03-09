@@ -1,0 +1,117 @@
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* MULTICOLOR BACKGROUND */
+
+.main-container{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  background: linear-gradient(
+    135deg,
+    #ff7e5f,
+    #feb47b,
+    #6a11cb,
+    #2575fc
+  );
+}
+
+
+/* COMPANY TITLE */
+
+.company-title{
+  font-size:42px;
+  color:white;
+  margin-bottom:40px;
+  text-shadow:0 4px 10px rgba(0,0,0,0.5);
+}
+
+
+/* BIG BOX */
+
+.newsletter-box{
+
+  width:600px;
+  padding:50px;
+
+  border-radius:15px;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f3f3f3,
+    #e0e0e0
+  );
+
+  text-align:center;
+
+  box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+
+/* TITLE */
+
+.title{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+
+/* SUBTITLE */
+
+.subtitle{
+  font-size:16px;
+  margin-bottom:25px;
+  color:#555;
+}
+
+
+/* INPUT */
+
+.newsletter-form input{
+  padding:12px;
+  width:60%;
+  border-radius:6px;
+  border:1px solid #ccc;
+  margin-right:10px;
+}
+
+
+/* BUTTON */
+
+.newsletter-form button{
+
+  padding:12px 25px;
+
+  border:none;
+
+  border-radius:6px;
+
+  background: linear-gradient(
+    45deg,
+    #ff512f,
+    #dd2476
+  );
+
+  color:white;
+  font-weight:bold;
+
+  cursor:pointer;
+}
+
+.newsletter-form button:hover{
+  transform:scale(1.05);
+}
+
+
+/* MESSAGE */
+
+.message{
+  margin-top:20px;
+  font-weight:bold;
+}
