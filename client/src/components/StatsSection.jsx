@@ -17,14 +17,8 @@ const StatsSection = () => {
             .catch(err => console.error('Error fetching stats:', err));
     }, []);
 
-    const getIcon = (iconName) => {
-        switch (iconName) {
-            case 'users': return <i className="fas fa-users"></i>;
-            case 'check-circle': return <i className="fas fa-check-circle"></i>;
-            case 'award': return <i className="fas fa-award"></i>;
-            case 'user-friends': return <i className="fas fa-user-friends"></i>;
-            default: return <i className="fas fa-chart-line"></i>;
-        }
+    const getIcon = () => {
+        return <i className="fa-solid fa-circle-check"></i>;
     };
 
     return (

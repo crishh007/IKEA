@@ -1,23 +1,29 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import { Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
-import HeaderBanner from './components/HeaderBanner';
-import StatsSection from './components/StatsSection';
-import AboutSection from './components/AboutSection';
-import TeamMember from './components/TeamMember';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Service from './pages/Service';
+import Project from './pages/Project';
+import Contact from './pages/Contact';
+import Quote from './pages/Quote';
 import './App.css';
 
 function App() {
     return (
         <div className="App">
-            <TopBar />
             <Navbar />
-            <HeaderBanner />
             <main>
-                <StatsSection />
-                <AboutSection />
-                <TeamMember />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/service" element={<Service />} />
+                    <Route path="/project" element={<Project />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/quote" element={<Quote />} />
+                </Routes>
             </main>
             <Footer />
         </div>

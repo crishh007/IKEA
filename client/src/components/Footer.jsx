@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import SuccessModal from './SuccessModal';
 import gallery1 from '../assets/gallery/gallery-1.png';
@@ -7,11 +8,33 @@ import gallery3 from '../assets/gallery/gallery-3.png';
 import gallery4 from '../assets/gallery/gallery-4.png';
 
 const Footer = () => {
+    const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsSubmitted(true);
+        setError('');
+        try {
+            const response = await fetch('/api/newsletter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setIsSubmitted(true);
+                setEmail('');
+            } else {
+                setError(data.error || 'Something went wrong');
+            }
+        } catch (err) {
+            setError('Failed to connect to server');
+        }
     };
 
     return (
@@ -35,10 +58,11 @@ const Footer = () => {
                     <div className="footer-col quick-links">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="#"><i className="fas fa-chevron-right"></i> About Us</a></li>
-                            <li><a href="#"><i className="fas fa-chevron-right"></i> Contact Us</a></li>
-                            <li><a href="#"><i className="fas fa-chevron-right"></i> Our Services</a></li>
-                            <li><a href="#"><i className="fas fa-chevron-right"></i> Projects</a></li>
+                            <li><Link to="/about"><i className="fas fa-chevron-right"></i> About Us</Link></li>
+                            <li><Link to="/contact"><i className="fas fa-chevron-right"></i> Contact Us</Link></li>
+                            <li><Link to="/service"><i className="fas fa-chevron-right"></i> Our Services</Link></li>
+                            <li><Link to="/project"><i className="fas fa-chevron-right"></i> Projects</Link></li>
+                            <li><Link to="/quote"><i className="fas fa-chevron-right"></i> Free Quote</Link></li>
                         </ul>
                     </div>
 
@@ -56,9 +80,16 @@ const Footer = () => {
                         <h3>Newsletter</h3>
                         <p>Subscribe to get updates on our latest sheet metal and aluminum fabrication projects.</p>
                         <form className="newsletter-form" onSubmit={handleSubmit}>
-                            <input type="email" placeholder="Your email" required />
+                            <input 
+                                type="email" 
+                                placeholder="Your email" 
+                                required 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
                             <button type="submit">SignUp</button>
                         </form>
+                        {error && <p className="error-message" style={{ color: '#ff4d4d', marginTop: '10px', fontSize: '14px' }}>{error}</p>}
                     </div>
                 </div>
             </div>

@@ -1,0 +1,43 @@
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://theedgesheetsmetal.com/img/carousel-1.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb span {
+    color: #ddd;
+}
+
+.breadcrumb .current {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+}

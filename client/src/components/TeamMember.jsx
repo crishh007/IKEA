@@ -10,7 +10,7 @@ const TeamMember = () => {
                     <h2 className="section-title">Experienced Team Member</h2>
                 </div>
                 <div className="team-grid">
-                    <div className="team-card">
+                    <div className="team-card card-premium">
                         <div className="team-card-content">
                             <h3 className="member-name">Daniel Vilarinho</h3>
                             <p className="member-role">President</p>

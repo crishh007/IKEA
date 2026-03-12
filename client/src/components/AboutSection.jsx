@@ -7,10 +7,10 @@ const AboutSection = () => {
         <section className="about-section">
             <div className="container">
                 <div className="about-wrapper">
-                    <div className="about-image">
-                        <img src={aboutImage} alt="Modern building with blue metal siding" />
+                    <div className="about-image reveal-left">
+                        <img src="https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg" alt="Canada's Trusted Experts in Metal" />
                     </div>
-                    <div className="about-content">
+                    <div className="about-content reveal-right">
                         <span className="section-subtitle">About Us</span>
                         <h2 className="section-title">Canada's Trusted Experts in Metal Siding, Cladding & Roofing Solutions</h2>
                         <p className="about-text">
@@ -20,20 +20,20 @@ const AboutSection = () => {
                             our end-to-end services are built to match the vision and demands of each unique project.
                         </p>
                         <div className="about-features">
-                            <div className="feature">
+                            <div className="feature card-premium">
                                 <i className="fas fa-check-circle"></i>
                                 <span>High-precision sheet metal fabrication</span>
                             </div>
-                            <div className="feature">
+                            <div className="feature card-premium">
                                 <i className="fas fa-check-circle"></i>
                                 <span>Custom aluminum solutions for diverse industries</span>
                             </div>
-                            <div className="feature">
+                            <div className="feature card-premium">
                                 <i className="fas fa-check-circle"></i>
                                 <span>Trusted partner for industrial-grade projects</span>
                             </div>
                         </div>
-                        <button className="read-more-btn">Explore More</button>
+                        <button className="read-more-btn btn-premium">Explore More</button>
                     </div>
                 </div>
             </div>

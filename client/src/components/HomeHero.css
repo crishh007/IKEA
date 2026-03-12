@@ -1,0 +1,57 @@
+.home-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.pexels.com/photos/19911427/pexels-photo-19911427.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    position: relative;
+    padding-top: 100px;
+}
+
+.home-hero-content {
+    max-width: 900px;
+    z-index: 2;
+    text-align: left;
+}
+
+.hero-subtitle {
+  display: block;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.home-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.rounded-btn {
+    border-radius: 25px;
+    padding: 12px 35px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .home-hero h1 {
+        font-size: 2.5rem;
+    }
+    .home-hero {
+        min-height: 450px;
+    }
+}
